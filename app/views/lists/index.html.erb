@@ -1,0 +1,11 @@
+<%= render 'banner' %>
+<div class="cards my-3">
+  <% @lists.each do |list| %>
+    <a href="lists/<%= list.id %>" class="text-decoration-none text-white">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1561722798-9a732d141027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)">
+        <%= list.name %>
+      </div>
+    </a>
+  <% end %>
+</div>
+<%= link_to 'Create a new list', new_list_path, class: 'btn btn-success' %>
